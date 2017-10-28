@@ -1,3 +1,14 @@
 server:
-  context-path: /parking-lot-service/api
+  context-path: /parking-lot-service
   port: 5555
+spring:
+  application:
+    name: parking-lot-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    health-check-url-path: ${server.context-path}/health
+    status-page-url-path: ${server.context-path}/info
