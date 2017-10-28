@@ -1,0 +1,3 @@
+server:
+  context-path: /parking-lot-service/api
+  port: 5555
