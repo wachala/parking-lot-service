@@ -12,3 +12,5 @@ eureka:
     prefer-ip-address: true
     health-check-url-path: ${server.context-path}/health
     status-page-url-path: ${server.context-path}/info
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
