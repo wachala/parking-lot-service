@@ -1,9 +1,12 @@
 package parking.lot.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import parking.lot.entity.ParkingLot;
+import parking.lot.service.ParkingLotService;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
@@ -12,18 +15,22 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RequestMapping("/api/parking-lot")
 public class ParkingLotController {
 
+    @Autowired
+    ParkingLotService parkingLotService;
+
     @RequestMapping(value = "/{id}", method = GET)
-    public String getParkingLotById(@PathVariable(name = "id") Long id) {
+        public ParkingLot getParkingLotById(@PathVariable(name = "id") Long id) {
         log.info("Fetching parking lot with id {}", id);
 
-        return "Hello from parking lot controller. Id passed: " + id;
+        //TODO null handling
+        return parkingLotService.findById(id);
     }
 
     @RequestMapping(method = GET)
-    public String getParkingLots() {
+    public Iterable<ParkingLot> getParkingLots() {
         log.info("Fetching all parking lots");
 
-        return "Hello from parking lot controller.";
+        return parkingLotService.findAll();
     }
 
 }
