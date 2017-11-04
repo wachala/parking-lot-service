@@ -19,7 +19,7 @@ public class ParkingLotController {
     ParkingLotService parkingLotService;
 
     @RequestMapping(value = "/{id}", method = GET)
-        public ParkingLot getParkingLotById(@PathVariable(name = "id") Long id) {
+    public ParkingLot getParkingLotById(@PathVariable(name = "id") Long id) {
         log.info("Fetching parking lot with id {}", id);
 
         //TODO null handling
