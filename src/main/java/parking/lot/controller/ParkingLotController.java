@@ -1,5 +1,6 @@
 package parking.lot.controller;
 
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ public class ParkingLotController {
     @Autowired
     ParkingLotService parkingLotService;
 
+    @ApiOperation(value = "Returns parking lot with given id.")
     @RequestMapping(value = "/{id}", method = GET)
     public ParkingLot getParkingLotById(@PathVariable(name = "id") Long id) {
         log.info("Fetching parking lot with id {}", id);
@@ -26,6 +28,7 @@ public class ParkingLotController {
         return parkingLotService.findById(id);
     }
 
+    @ApiOperation(value = "Returns all parking lots available.")
     @RequestMapping(method = GET)
     public Iterable<ParkingLot> getParkingLots() {
         log.info("Fetching all parking lots");
