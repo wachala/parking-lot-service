@@ -13,7 +13,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Slf4j
 @RestController()
-@RequestMapping("/api/parking-lot")
+@RequestMapping("parking-lot-service/api/parking-lot")
 public class ParkingLotController {
 
     @Autowired
