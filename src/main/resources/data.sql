@@ -1,20 +1,20 @@
 INSERT INTO PARKING_LOT (ID, ADDITIONAL_INFORMATION, ADDRESS, GOOGLE_STREET_VIEW_LINK, LATITUDE, LONGITUDE, PRICING, RESTRICTIONS, SECURITY)
 VALUES
-  (1, 'Parking przy Muzeum', ' aleja Adama Mickiewicza 18, 33-332 Kraków', 'http://sample-link.com', 10.52, 12.33, '$$',
+  (1, 'Parking przy Muzeum', ' aleja Adama Mickiewicza 18, 33-332 Kraków', 'http://sample-link.com', 50.063939, 19.924081, '$$',
    'No gas', 'Yes'),
-  (2, 'Parking Strzeżony Satis Plus 24h', 'Czarnowiejska 4, 33-332 Kraków', 'http://sample-link.com', 10.52, 12.33,
+  (2, 'Parking Strzeżony Satis Plus 24h', 'Czarnowiejska 4, 33-332 Kraków', 'http://sample-link.com', 50.065510, 19.925727,
    '$$', 'No restrictions', 'Yes'),
-  (3, 'Parking Wawel', 'plac Na Groblach 24, 33-332 Kraków', 'http://sample-link.com', 10.52, 12.33, '$$$',
+  (3, 'Parking Wawel', 'plac Na Groblach 24, 33-332 Kraków', 'http://sample-link.com', 50.055565, 19.932195, '$$$',
    'No restrictions', 'Yes'),
-  (4, 'GWŻ - Parking', 'Dajwór 17, 31-000 Kraków', 'http://sample-link.com', 10.52, 12.33, '$$$', 'No restrictions',
+  (4, 'GWŻ - Parking', 'Dajwór 17, 31-000 Kraków', 'http://sample-link.com', 50.051276, 19.949048, '$$$', 'No restrictions',
    'No'),
-  (5, 'Jano. Parking strzeżony', 'Armii Krajowej 85, 30-962 Kraków', 'http://sample-link.com', 10.52, 12.33, '$',
+  (5, 'Jano. Parking strzeżony', 'Armii Krajowej 85, 30-962 Kraków', 'http://sample-link.com', 50.078759, 19.888258, '$',
    'No gas', 'Yes'),
-  (6, 'Parking Stare Podgórze', 'Jana Zamoyskiego 22, 33-332 Kraków', 'http://sample-link.com', 10.52, 12.33, '$',
+  (6, 'Parking Stare Podgórze', 'Jana Zamoyskiego 22, 33-332 Kraków', 'http://sample-link.com', 50.042572, 19.946804, '$',
    'No restrictions', 'No'),
-  (7, 'Parking Okęcie Szyszkowa 45', 'Szyszkowa 45, 02-285 Warszawa', 'http://sample-link.com', 10.52, 12.33, '$$',
+  (7, 'Parking Okęcie Szyszkowa 45', 'Szyszkowa 45, 02-285 Warszawa', 'http://sample-link.com', 52.175313, 20.918889, '$$',
    'No restrictions', 'Yes'),
-  (8, 'Lider Parking Okęcie', 'Skrzydlata 1, 02-176 Warszawa', 'http://sample-link.com', 10.52, 12.33, '$$$',
+  (8, 'Lider Parking Okęcie', 'Skrzydlata 1, 02-176 Warszawa', 'http://sample-link.com', 52.184877, 20.956054, '$$$',
    'No restrictions', 'Yes');
 
 INSERT INTO PARKING_LOT_PARKING_CAPACITY (PARKING_LOT_ID, PARKING_CAPACITY, PARKING_CAPACITY_KEY)
