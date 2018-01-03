@@ -23,8 +23,13 @@ public class ParkingLot {
     private String restrictions;
     private String additionalInformation;
     private String googleStreetViewLink;
+
     @ElementCollection
     @MapKeyEnumerated(EnumType.ORDINAL)
     private Map<ParkingLotType, Integer> parkingCapacity;
+
+    @ElementCollection
+    @MapKeyEnumerated(EnumType.ORDINAL)
+    private Map<ParkingLotType, Integer> parkingSpotsOccupied;
 
 }
