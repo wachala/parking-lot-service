@@ -3,13 +3,13 @@ package parking.lot.controller;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import parking.lot.entity.ParkingLot;
+import parking.lot.model.ParkingLotUpdateEvent;
 import parking.lot.service.ParkingLotService;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
 @Slf4j
 @RestController()
@@ -34,6 +34,15 @@ public class ParkingLotController {
         log.info("Fetching all parking lots");
 
         return parkingLotService.findAll();
+    }
+
+    @ApiOperation(value = "Updates information about parking lots spots occupancy")
+    @RequestMapping(method = PUT, consumes = "application/json")
+    @ResponseBody
+    public void updateParkingLotOccupancy(@RequestBody ParkingLotUpdateEvent event) {
+        log.info("Updating parking lot occupancy");
+
+        parkingLotService.updateParkingLotOccupancy(event);
     }
 
 }
