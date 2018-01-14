@@ -1,0 +1,17 @@
+server:
+  port: 5555
+name: parking-lot-service
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        input: profiles
+
+ribbon:
+  eureka:
+    enabled: false
+
+feign:
+  hystrix:
+    enabled: true
